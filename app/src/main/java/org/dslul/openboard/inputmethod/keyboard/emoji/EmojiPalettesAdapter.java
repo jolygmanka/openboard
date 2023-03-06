@@ -29,7 +29,6 @@ import org.dslul.openboard.inputmethod.latin.R;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import org.dslul.openboard.inputmethod.latin.settings.Settings;
 
 final class EmojiPalettesAdapter extends RecyclerView.Adapter<EmojiPalettesAdapter.ViewHolder>{
     private static final String TAG = EmojiPalettesAdapter.class.getSimpleName();
@@ -58,10 +57,6 @@ final class EmojiPalettesAdapter extends RecyclerView.Adapter<EmojiPalettesAdapt
     }
 
     public void addRecentKey(final Key key) {
-        if (Settings.getInstance().getCurrent().mIncognitoModeEnabled) {
-            // We do not want to log recent keys while being in incognito
-            return;
-        }
         if (mEmojiCategory.isInRecentTab()) {
             mRecentsKeyboard.addPendingKey(key);
             return;
