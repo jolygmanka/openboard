@@ -47,13 +47,6 @@
         android:defaultValue="true"
         android:persistent="true" />
 
-    <CheckBoxPreference
-        android:key="pref_show_setup_wizard_icon"
-        android:title="@string/show_setup_wizard_icon"
-        android:summary="@string/show_setup_wizard_icon_summary"
-        android:defaultValue="true"
-        android:persistent="true" />
-
     <PreferenceScreen
             android:fragment="org.dslul.openboard.inputmethod.latin.settings.DebugSettingsFragment"
             android:key="screen_debug"
